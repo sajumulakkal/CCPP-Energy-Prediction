@@ -1,4 +1,44 @@
-⚡ Combined Cycle Power Plant (CCPP) Energy Prediction📌 Project OverviewPredicting the Net Hourly Electrical Energy Output (PE) is critical for the efficient operation of a power plant and its integration into the electrical grid. This project leverages Machine Learning to forecast energy production based on environmental ambient variables.ShutterstockExploreA Combined Cycle Power Plant (CCPP) uses both a gas turbine and a steam turbine together to produce up to 50% more electricity from the same fuel than a traditional simple-cycle plant. The waste heat from the gas turbine is routed to the nearby steam turbine, which generates extra power.📊 Dataset AnalysisThe dataset contains 9,568 data points collected from a Combined Cycle Power Plant over six years (2006-2011) when the plant was set to work with a full load.FeatureDescriptionRangeATAmbient Temperature1.81°C to 37.11°CVExhaust Vacuum25.36 to 81.56 cm HgAPAmbient Pressure992.89 to 1033.30 mbarRHRelative Humidity25.56% to 100.16%PE (Target)Net Hourly Electrical Energy Output420.26 to 495.76 MW🚀 Getting StartedPrerequisitesPython 3.11 or higherpip or conda package managerInstallationClone the repository:Bashgit clone https://github.com/yourusername/ccpp-energy-prediction.git
+# ⚡ Combined Cycle Power Plant (CCPP) Energy Prediction
+
+![Python Version](https://img.shields.io/badge/python-3.11%2B-blue)
+![ML Framework](https://img.shields.io/badge/focus-Machine%20Learning-green)
+![Status](https://img.shields.io/badge/status-completed-brightgreen)
+
+## 📌 Project Overview
+This project utilizes Machine Learning to predict the **Net Hourly Electrical Energy Output (PE)** of a Combined Cycle Power Plant using environmental sensor data. By comparing three distinct regression architectures, we identify the most accurate method for forecasting energy production based on ambient atmospheric conditions.
+
+
+
+[Image of Combined Cycle Power Plant diagram]
+
+
+### Why this matters?
+In a CCPP, load prediction is vital for grid stability. Since performance is highly dependent on ambient conditions (Temperature, Humidity, etc.), manual calculations are often insufficient. This project automates that process with high precision.
+
+---
+
+## 📊 Dataset Features
+The model is trained on **9,568 samples** collected from a real-world power plant over 6 years.
+
+| Feature | Description | Range |
+| :--- | :--- | :--- |
+| **AT** | Ambient Temperature | 1.81°C to 37.11°C |
+| **V** | Exhaust Vacuum | 25.36 to 81.56 cm Hg |
+| **AP** | Ambient Pressure | 992.89 to 1033.30 mbar |
+| **RH** | Relative Humidity | 25.56% to 100.16% |
+| **PE (Target)** | Net Hourly Electrical Energy Output | 420.26 to 495.76 MW |
+
+---
+
+## 🛠️ Installation & Setup
+
+### 1. Prerequisites
+* Python 3.11+
+* Virtual Environment (Recommended)
+
+### 2. Setup
+Clone the repository and install the necessary dependencies:
+```bash
+git clone [https://github.com/your-username/ccpp-energy-prediction.git](https://github.com/your-username/ccpp-energy-prediction.git)
 cd ccpp-energy-prediction
-Install dependencies:Bashpip install -r requirements.txt
-Running the ModelsEach script follows a Train-Test-Predict workflow. After evaluating the model, you can enter custom sensor values into the terminal to see real-time predictions.Linear Regression: python model_linear_regression.pyRandom Forest: python model_random_forest_regression.pyNeural Network: python model_neural_network.py📈 Performance ComparisonAfter rigorous testing, the models performed as follows:ModelR2 ScoreRMSEBest Use CaseLinear Regression0.93014.50 MWFast baseline & interpretabilityRandom Forest0.96373.25 MWHigh precision & reliabilityNeural Network0.94293.90 MWDeep feature extraction💡 Key InsightsTemperature is King: Ambient Temperature (AT) has a strong negative correlation with energy output. As temperature rises, the density of air decreases, reducing the mass flow rate and efficiency.Why Random Forest Won: The Random Forest Regressor handled the non-linear relationship between Vacuum (V) and Energy Output more effectively than the linear baseline.🛠️ Built WithScikit-Learn - For Linear Regression and Random Forest implementations.TensorFlow/Keras - For building the Deep Learning Neural Network.Pandas & NumPy - For data manipulation and numerical analysis.Matplotlib/Seaborn - For data visualization.
+pip install -r requirements.txt
