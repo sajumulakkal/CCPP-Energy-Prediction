@@ -8,8 +8,7 @@
 This project utilizes Machine Learning to predict the **Net Hourly Electrical Energy Output (PE)** of a Combined Cycle Power Plant using environmental sensor data. By comparing three distinct regression architectures, we identify the most accurate method for forecasting energy production based on ambient atmospheric conditions.
 
 
-
-[Image of Combined Cycle Power Plant diagram]
+![CCPP Diagram](https://raw.githubusercontent.com/sajumulakkal/CCPP-Energy-Prediction/main/CCCP.png)
 
 
 ### Why this matters?
